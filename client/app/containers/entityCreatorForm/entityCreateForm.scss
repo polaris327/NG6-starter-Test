@@ -16,7 +16,7 @@
 }
 
 .close-modal{
-  width: 50px; height: 50px; text-align: center; line-height: 50px;
+  width: 32px; height: 32px; text-align: center; line-height: 50px;
   position: fixed;
   right: -31%;
   top: 20px;
@@ -33,22 +33,26 @@
   .modal-head{
     @include full-width; text-align: center; margin-top: 30px;
     p{
-      @include full-width; font-size: 14px;
+      height: 24px; color: rgba(0,0,0,0.54); font-family: Roboto; font-size: 16px; line-height: 24px; text-align: center; margin-top: 56px;
     }
     h2{
-      @include full-width; font-size: 32px; margin-bottom: 30px;
+      height: 40px;	color: rgba(0,0,0,0.87); font-family: Roboto; font-size: 32px; line-height: 40px; text-align: center; margin-top: 40px;
     }
   }
   .modal-body{
-    @include full-width; padding: 0px;
-    @include box-shadow(rgba($black-color, 0.2));
-    border: solid 1px rgba($black-color, 0.2);
+    padding: 0px;
+    width: 780px;
+    float: left;
+    box-sizing: border-box;
+    margin-top: 40px;
+    background-color: #FFFFFF;
+    box-shadow: 0 0 2px 0 rgba(0,0,0,0.12), 0 2px 2px 0 rgba(0,0,0,0.24);
     .search-section{
       @include full-width;
       span{
         position: absolute;
         left: 30px; top: 20px; font-size: 20px;
-        color: $plus-color;
+        color: rgba(0,0,0,0.38);
       }
       input{
         @include full-width;
@@ -58,6 +62,11 @@
         &:focus{
           outline: none;
         }
+      }
+      .burger-icon{
+        position: absolute;
+        top: 26px;
+        right: 24px;
       }
       i{
         position: absolute;
@@ -72,7 +81,7 @@
     @include display-flex-center;
     height: 200px;
     button{
-      width: 230px; line-height: 55px; @include rounded(2px);  background: #4caf50; text-transform: uppercase; border: 0; font-size: 14px; color: $white-color;
+      width: 234px; line-height: 55px; @include rounded(2px);  background: #4caf50; text-transform: uppercase; border: 0; font-size: 14px; color: $white-color;
       @include box-shadow(rgba($black-color, 0.8));
       &:focus{
         outline: none;

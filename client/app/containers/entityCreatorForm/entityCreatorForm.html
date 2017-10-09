@@ -4,12 +4,13 @@
 <div class="entity-create-modal">
   <div class="modal-head">
     <p>2016 KPI:$15M Renewal Revenue (Strategic Goal)</p>
-    <h2>Add Entities</h2>
+    <h2>Add entities</h2>
   </div>
   <div class="modal-body">
     <div class="search-section">
       <span class="glyphicon glyphicon-search"></span>
       <input type="search" ng-model="vm.search" placeholder="Search entity" />
+      <img class="burger-icon" src="../../../images/sort-icon.png"/>
     </div>
     <div class="entity-list">
       <entity-list-item ng-repeat="e in vm.entities | filter : vm.search" entity="e" container="'creator'"></entity-list-item>

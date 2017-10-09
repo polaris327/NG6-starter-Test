@@ -2,11 +2,11 @@
     <div class="row">
       <div class="thumbnail entity-item">
         <div class="check-icon" ng-if="vm.container == 'creator'"><input class="notCheckedInput" ng-class="{'checkedInput' : vm.entity.isConnected}" type="checkbox" ng-model="vm.entity.isConnected"></div>
-        <div class="caption">
+        <div class="{{ vm.container == 'creator' ? 'caption' : 'entity-caption' }}">
           <h3>{{vm.entity.name}}</h3>
           <p>{{vm.entity.type}}</p>
         </div>
-        <div>
+        <div class="close-icon">
           <i class="glyphicon glyphicon-remove pull-right" ng-if="vm.container == 'entity'" ng-click="vm.removeEntity()"></i>
         </div>
       </div>
