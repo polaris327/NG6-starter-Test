@@ -1,0 +1,82 @@
+@import "../../../theme/variables.scss";
+@import "../../../theme/mixins.scss";
+
+.modal-dialog{
+  width: 800px !important; margin: 0 auto !important;
+}
+.modal-backdrop{
+  background: $white-color !important;
+}
+.modal-backdrop.in {
+  filter: alpha(opacity=100) !important;
+  opacity: 1 !important;
+}
+.modal-content{
+  border: 0 !important;
+}
+
+.close-modal{
+  width: 50px; height: 50px; text-align: center; line-height: 50px;
+  position: fixed;
+  right: -31%;
+  top: 20px;
+  cursor: pointer;
+  i{
+    color: rgba($black-color, 0.2);
+    font-size: 35px;
+  }
+}
+.entity-create-modal{
+  @include full-width;
+  background: $white-color;
+
+  .modal-head{
+    @include full-width; text-align: center; margin-top: 30px;
+    p{
+      @include full-width; font-size: 14px;
+    }
+    h2{
+      @include full-width; font-size: 32px; margin-bottom: 30px;
+    }
+  }
+  .modal-body{
+    @include full-width; padding: 0px;
+    @include box-shadow(rgba($black-color, 0.2));
+    border: solid 1px rgba($black-color, 0.2);
+    .search-section{
+      @include full-width;
+      span{
+        position: absolute;
+        left: 30px; top: 20px; font-size: 20px;
+        color: $plus-color;
+      }
+      input{
+        @include full-width;
+        line-height: 60px;
+        padding: 0 20px 0 70px;
+        border: 0;
+        &:focus{
+          outline: none;
+        }
+      }
+      i{
+        position: absolute;
+        right: 15px; top: 18px; font-size: 22px;
+        color: $plus-color;
+        cursor: pointer;
+      }
+    }
+  }
+  .modal-footer{
+    @include full-width;
+    @include display-flex-center;
+    height: 200px;
+    button{
+      width: 230px; line-height: 55px; @include rounded(2px);  background: #4caf50; text-transform: uppercase; border: 0; font-size: 14px; color: $white-color;
+      @include box-shadow(rgba($black-color, 0.8));
+      &:focus{
+        outline: none;
+      }
+    }
+  }
+}

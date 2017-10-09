@@ -1,0 +1,21 @@
+<div class="close-modal" ng-click="vm.hideModal()">
+  <i class="glyphicon glyphicon-remove"></i>
+</div>
+<div class="entity-create-modal">
+  <div class="modal-head">
+    <p>2016 KPI:$15M Renewal Revenue (Strategic Goal)</p>
+    <h2>Add Entities</h2>
+  </div>
+  <div class="modal-body">
+    <div class="search-section">
+      <span class="glyphicon glyphicon-search"></span>
+      <input type="search" ng-model="vm.search" placeholder="Search entity" />
+    </div>
+    <div class="entity-list">
+      <entity-list-item ng-repeat="e in vm.entities | filter : vm.search" entity="e" container="'creator'"></entity-list-item>
+    </div>
+  </div>
+  <div class="modal-footer">
+    <button ng-click="vm.connectEntity()">Connect</button>
+  </div>
+</div>

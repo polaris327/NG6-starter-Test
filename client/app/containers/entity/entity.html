@@ -1,0 +1,12 @@
+<div class="entity-page">
+  <div class="connect-section">
+    <div class="connect-entity">
+      <span ng-click="vm.showModal()">+</span>
+        {{ vm.entities.length ? 'Entities connected (' + vm.entities.length + ')' : 'Connect Entity' }}
+      <i class="glyphicon" ng-class="{'glyphicon-chevron-down' : !vm.isEdit, 'glyphicon-chevron-up' : vm.isEdit}" ng-click="vm.isEdit = !vm.isEdit" ng-if="vm.entities.length > 0"></i>
+      <ul ng-show="vm.isEdit">
+        <entity-list-item ng-repeat="e in vm.entities" entity="e" container="'entity'"></entity-list-item>
+      </ul>
+    </div>
+  </div>
+</div>
